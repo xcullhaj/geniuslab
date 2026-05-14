@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rezervime GeniusLAB</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="top-brand" href="#" aria-label="GeniusLAB">
+      <img src="assets/geniuslab-logo.png" alt="GeniusLAB" />
+    </a>
+
+    <main class="auth-shell" id="authScreen">
+      <section class="auth-card" aria-labelledby="auth-title">
+        <div class="auth-visual" aria-hidden="true">
+          <div class="health-symbol">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21s-7.5-4.4-9.5-9.1C1 8.3 3.2 5 6.7 5c2 0 3.4 1 4.3 2.2C11.9 6 13.3 5 15.3 5 18.8 5 21 8.3 19.5 11.9 17.5 16.6 12 21 12 21Z" />
+              <path d="M8 12h2.5l1-2.4 1.9 5 1-2.6H17" />
+            </svg>
+          </div>
+          <div class="care-points">
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h8v4h4v16H4V6h4V2Zm2 4h4V4h-4v2Zm1 4v3H8v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+              Shëndeti në radhë të parë
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v2h3v18H4V4h3V2Zm0 6h10V6H7v2Zm0 4h10v-2H7v2Zm0 4h7v-2H7v2Z"/></svg>
+              Rezervim i lehtë dhe i sigurt
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1 13.6-3.2-3.2 1.4-1.4 1.8 1.8 4.3-4.3 1.4 1.4-5.7 5.7Z"/></svg>
+              Kujdes profesional çdo ditë
+            </span>
+          </div>
+        </div>
+
+        <div class="auth-content">
+          <div class="auth-copy">
+            <p class="eyebrow">Portali i pacientit</p>
+            <h1 id="auth-title">Hyr ose krijo llogari</h1>
+            <p>Pas hyrjes mund te rezervosh direkt konsulten me mjekun ne GeniusLAB.</p>
+          </div>
+
+          <div class="auth-tabs" role="tablist" aria-label="Zgjidh hyrje ose regjistrim">
+            <button class="auth-tab" type="button" data-auth-mode="login" aria-pressed="true">Hyrje</button>
+            <button class="auth-tab" type="button" data-auth-mode="signup" aria-pressed="false">Regjistrim</button>
+          </div>
+
+          <form id="authForm" class="auth-form">
+            <div class="field-group signup-only">
+              <label for="authName">Emri i plote</label>
+              <input id="authName" name="authName" type="text" autocomplete="name" placeholder="Emri juaj" />
+            </div>
+            <div class="field-group">
+              <label for="authEmail">Email</label>
+              <input id="authEmail" name="authEmail" type="email" autocomplete="email" placeholder="emri@email.com" required />
+            </div>
+            <div class="field-group signup-only">
+              <label for="authPhone">Telefoni</label>
+              <input id="authPhone" name="authPhone" type="tel" autocomplete="tel" placeholder="+355 69 000 0000" />
+            </div>
+            <div class="field-group">
+              <label for="authPassword">Fjalekalimi</label>
+              <div class="password-field">
+                <input id="authPassword" name="authPassword" type="password" autocomplete="current-password" placeholder="Minimumi 6 karaktere" required />
+                <button id="togglePassword" class="password-toggle" type="button" aria-label="Shfaq fjalekalimin" title="Shfaq fjalekalimin">
+                  <svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 5c5.4 0 8.6 4.6 9.5 6.2.3.5.3 1.1 0 1.6C20.6 14.4 17.4 19 12 19s-8.6-4.6-9.5-6.2a1.6 1.6 0 0 1 0-1.6C3.4 9.6 6.6 5 12 5Zm0 2c-4.2 0-6.8 3.5-7.7 5 .9 1.5 3.5 5 7.7 5s6.8-3.5 7.7-5c-.9-1.5-3.5-5-7.7-5Zm0 2.2a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z" />
+                  </svg>
+                  <svg class="eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m4.3 3 16.8 16.8-1.4 1.4-3-3A10.1 10.1 0 0 1 12 19c-5.4 0-8.6-4.6-9.5-6.2a1.6 1.6 0 0 1 0-1.6c.4-.7 1.3-2 2.5-3.1L2.9 4.4 4.3 3Zm2.1 6.5A12.5 12.5 0 0 0 4.3 12c.9 1.5 3.5 5 7.7 5 1.2 0 2.2-.3 3.2-.8l-2-2a2.8 2.8 0 0 1-3.5-3.5L6.4 9.5ZM12 5c5.4 0 8.6 4.6 9.5 6.2.3.5.3 1.1 0 1.6-.2.4-.8 1.2-1.5 2L17.8 13a9.2 9.2 0 0 0 1.9-1c-.9-1.5-3.5-5-7.7-5-.8 0-1.6.1-2.3.4L8.1 5.8A10.1 10.1 0 0 1 12 5Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button class="primary-action" id="authSubmit" type="submit">Hyr ne llogari</button>
+            <p class="auth-message" id="authMessage" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <main class="app-shell" id="bookingApp" hidden>
+      <section class="booking-panel" aria-labelledby="booking-title">
+        <header class="booking-header">
+          <div class="brand-row">
+            <div class="header-actions">
+              <span class="clinic-badge">Rezervim online</span>
+              <button class="settings-button" id="settingsButton" type="button" aria-label="Ndrysho të dhënat" title="Ndrysho të dhënat">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19.4 13.5c.1-.5.1-1 .1-1.5s0-1-.1-1.5l2-1.5-2-3.5-2.4 1a8.2 8.2 0 0 0-2.6-1.5L14 2.5h-4l-.4 2.5A8.2 8.2 0 0 0 7 6.5l-2.4-1-2 3.5 2 1.5c-.1.5-.1 1-.1 1.5s0 1 .1 1.5l-2 1.5 2 3.5 2.4-1c.8.6 1.6 1.1 2.6 1.5l.4 2.5h4l.4-2.5c1-.4 1.8-.9 2.6-1.5l2.4 1 2-3.5-2-1.5ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z" />
+                </svg>
+              </button>
+              <button class="logout-button" id="logoutButton" type="button">Dil</button>
+            </div>
+          </div>
+          <div class="header-copy">
+            <h1 id="booking-title">Rezervo konsultën me mjekun që të duhet</h1>
+            <p>Zgjidh specialitetin, mjekun dhe orarin e lirë. GeniusLAB e bën rezervimin të qartë, të shpejtë dhe të lehtë për pacientin.</p>
+          </div>
+          <div class="header-stats" aria-label="Informacione të shpejta">
+            <span>30+ mjekë</span>
+            <span>Orar fleksibël</span>
+            <span>Konfirmim i menjëhershëm</span>
+          </div>
+        </header>
+
+        <form id="appointmentForm" class="booking-form">
+          <div class="field-group">
+            <label for="specialty">Specialiteti</label>
+            <select id="specialty" name="specialty" required></select>
+          </div>
+
+          <div class="doctor-grid" id="doctorGrid" aria-label="Mjekët e disponueshëm"></div>
+
+          <div class="form-row">
+            <div class="field-group">
+              <label for="appointmentDate">Data</label>
+              <input id="appointmentDate" name="appointmentDate" type="date" required />
+            </div>
+            <div class="field-group">
+              <label for="visitMode">Mënyra e vizitës</label>
+              <select id="visitMode" name="visitMode" required>
+                <option value="Në klinikë">Në klinikë</option>
+                <option value="Konsultë me video">Konsultë me video</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="slot-section">
+            <div class="section-heading">
+              <h2>Oraret e disponueshme</h2>
+              <span id="slotHint">Zgjidh një mjek dhe datë</span>
+            </div>
+            <div class="slot-grid" id="slotGrid" aria-label="Oraret e disponueshme"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group">
+              <label for="patientName">Emri i plotë</label>
+              <input id="patientName" name="patientName" type="text" autocomplete="name" placeholder="Alex Morgan" required />
+            </div>
+            <div class="field-group">
+              <label for="patientPhone">Telefoni</label>
+              <input id="patientPhone" name="patientPhone" type="tel" autocomplete="tel" placeholder="+1 555 0123" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="reason">Arsyeja e konsultës</label>
+            <textarea id="reason" name="reason" rows="3" placeholder="Përshkruani shkurt çfarë dëshironi të diskutoni"></textarea>
+          </div>
+
+          <button class="primary-action" type="submit">Rezervo takimin</button>
+          <p class="form-note">GeniusLAB</p>
+        </form>
+      </section>
+
+      <aside class="summary-panel" aria-label="Përmbledhja e takimit">
+        <section class="confirmation" id="confirmation" hidden>
+          <div class="confirmation-top">
+            <span class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.5-8.5 1.4 1.4-9.9 9.9Z" />
+              </svg>
+            </span>
+            <div>
+              <p class="eyebrow">U konfirmua</p>
+              <h2>Takimi juaj u rezervua me sukses</h2>
+            </div>
+          </div>
+          <p id="confirmationText" class="confirmation-text"></p>
+          <div class="notification-note">
+            <strong>Kujtesë automatike</strong>
+            <span>Do të njoftoheni me email dhe telefon 15 minuta para orarit të takimit.</span>
+          </div>
+        </section>
+
+        <section class="appointment-list">
+          <div class="section-heading">
+            <h2>Rezervimet e ardhshme</h2>
+            <button id="clearAppointments" class="text-button" type="button">Pastro</button>
+          </div>
+          <div id="appointments"></div>
+        </section>
+      </aside>
+    </main>
+
+    <div class="settings-modal" id="settingsModal" hidden>
+      <section class="settings-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="section-heading">
+          <h2 id="settingsTitle">Ndrysho të dhënat</h2>
+          <button class="text-button" id="closeSettings" type="button">Mbyll</button>
+        </div>
+        <form id="settingsForm" class="auth-form">
+          <div class="field-group">
+            <label for="settingsName">Emri i plotë</label>
+            <input id="settingsName" name="settingsName" type="text" autocomplete="name" required />
+          </div>
+          <div class="field-group">
+            <label for="settingsEmail">Email</label>
+            <input id="settingsEmail" name="settingsEmail" type="email" autocomplete="email" required />
+          </div>
+          <div class="field-group">
+            <label for="settingsPhone">Telefoni</label>
+            <input id="settingsPhone" name="settingsPhone" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="field-group">
+            <label for="settingsPassword">Fjalëkalimi</label>
+            <input id="settingsPassword" name="settingsPassword" type="password" autocomplete="new-password" placeholder="Lëre bosh nëse nuk do ta ndryshosh" />
+          </div>
+          <button class="primary-action" type="submit">Ruaj ndryshimet</button>
+          <p class="auth-message" id="settingsMessage" role="status"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
